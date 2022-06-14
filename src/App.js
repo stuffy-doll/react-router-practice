@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 import Stocks from "./components/Stocks";
 import Movies from "./components/Movies";
-const { Route, Switch, Link } = require("react-router-dom");
+const { Route, Switch, NavLink } = require("react-router-dom");
 
 function App() {
   return (
@@ -10,10 +10,15 @@ function App() {
       <nav className={"comp nav"}>
         <ul>
           <li>
-            <a href="/movies">Anchor</a>
+            <NavLink exact={true} to="/">
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/stocks">Stocks</NavLink>
+          </li>
+          <li>
+            <NavLink to="/movies">Movies</NavLink>
           </li>
         </ul>
       </nav>
