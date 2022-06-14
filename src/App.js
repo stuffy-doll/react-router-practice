@@ -10,15 +10,32 @@ function App() {
       <nav className={"comp nav"}>
         <ul>
           <li>
-            <NavLink exact={true} to="/">
+            <NavLink
+              activeClassName="purple"
+              activeStyle={{ fontWeight: "bold" }}
+              exact={true}
+              to="/"
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/stocks">Stocks</NavLink>
+            <NavLink
+              activeClassName="purple"
+              activeStyle={{ fontWeight: "bold" }}
+              to="/stocks"
+            >
+              Stocks
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/movies">Movies</NavLink>
+            <NavLink
+              activeClassName="purple"
+              activeStyle={{ fontWeight: "bold" }}
+              to="/movies"
+            >
+              Movies
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -31,6 +48,9 @@ function App() {
         </Route>
         <Route path="/movies">
           <Movies />
+        </Route>
+        <Route path="/not-logged-in">
+          <h1>You must be logged in to enter.</h1>
         </Route>
         <Route>
           <h1>Page Not Found</h1>
